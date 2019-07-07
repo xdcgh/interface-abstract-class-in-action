@@ -48,12 +48,12 @@ public class World {
         }
     }
 
-    static class 活的动物 implements 动物 {
+    public class 活的动物 implements 动物 {
         @Override
         public void 新陈代谢() { System.out.println("新陈代谢"); }
     }
 
-    static class 麻雀 extends 鸟 { }
+    public class 麻雀 extends 鸟 { }
 
     static class 喜鹊 extends 鸟 { }
 
