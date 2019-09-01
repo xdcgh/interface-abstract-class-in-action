@@ -91,9 +91,7 @@ public class World {
     }
 
     static class 猫 extends 活物 implements 会叫的东西{
-        public void 新陈代谢() {
-            System.out.println("新陈代谢");
-        }
+
 
         public void 叫() {
             System.out.println("喵喵喵");
@@ -101,9 +99,6 @@ public class World {
     }
 
     static class 狗 extends 活物 implements 会叫的东西{
-        public void 新陈代谢() {
-            System.out.println("新陈代谢");
-        }
 
         public void 叫() {
             System.out.println("汪汪汪");
