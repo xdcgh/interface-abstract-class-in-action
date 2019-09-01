@@ -9,6 +9,7 @@ public class World {
     public static List<Object> objects =
             Arrays.asList(new 麻雀(), new 喜鹊(), new 蝴蝶(), new 飞机(), new 救护车(), new 猫(), new 狗());
     // 在建造成类型体系后，请尝试化简这个啰嗦的方法，体会多态带来的好处
+
     public static void 会飞的东西飞() {
         for (Object obj : objects) {
             if (obj instanceof 会飞的东西) {
@@ -46,7 +47,7 @@ public class World {
         void 叫();
     }
 
-    //定义一个抽象类（静态类调用静态方法）
+
     static class 活物 implements 动物{
         public void 新陈代谢() {
             System.out.println("新陈代谢");
