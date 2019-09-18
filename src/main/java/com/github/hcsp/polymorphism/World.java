@@ -39,7 +39,7 @@ public class World {
         动物都能新陈代谢();
     }
 
-    private abstract static class bird extends livedAnimal implements 动物,会飞的东西,会叫的东西{
+    abstract static class bird extends livedAnimal implements 动物,会飞的东西,会叫的东西{
         @Override
         public void 飞() {
             System.out.println("鸟儿飞");
@@ -49,7 +49,7 @@ public class World {
             System.out.println("叽叽喳喳");
         }
     }
-    private abstract static class livedAnimal implements 动物{
+    abstract static class livedAnimal implements 动物{
         @Override
         public void 新陈代谢() {
             System.out.println("新陈代谢");
