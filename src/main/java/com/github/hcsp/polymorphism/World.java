@@ -16,6 +16,7 @@ public class World {
             }
         }
     }
+
     // 在建造成类型体系后，请尝试化简这个啰嗦的方法，体会多态带来的好处
     public static void 会叫的东西叫() {
         for (Object obj : objects) {
@@ -24,6 +25,7 @@ public class World {
             }
         }
     }
+
     // 在建造成类型体系后，请尝试化简这个啰嗦的方法，体会多态带来的好处
     public static void 动物都能新陈代谢() {
         for (Object obj : objects) {
@@ -37,9 +39,12 @@ public class World {
 
     static class 鸟 extends 会动的动物 implements 会叫的东西,会飞的东西{}
 
+
     static class 宠物 extends 会动的动物 implements 会叫的东西{}
 
+
     static class 昆虫 extends 会动的动物 implements 会飞的东西{}
+
 
     static class 麻雀 extends 鸟{}
 
