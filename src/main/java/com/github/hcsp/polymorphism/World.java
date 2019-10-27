@@ -70,6 +70,7 @@ public class World {
         public void 叫() {
             System.out.println("汪汪汪");
         }
+
     }
 
     static class Abstract动物 {
