@@ -22,7 +22,7 @@ public class WorldTest {
                                 World.蝴蝶.class,
                                 World.猫.class,
                                 World.狗.class)
-                        .allMatch(World.动物.class::isAssignableFrom));
+                        .allMatch(World.Abstract动物.class::isAssignableFrom));
         Assertions.assertTrue(
                 Stream.of(
                                 World.麻雀.class,
