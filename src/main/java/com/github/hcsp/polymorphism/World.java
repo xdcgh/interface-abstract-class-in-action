@@ -11,51 +11,29 @@ public class World {
     // 在建造成类型体系后，请尝试化简这个啰嗦的方法，体会多态带来的好处
     public static void 会飞的东西飞() {
         for (Object obj : objects) {
-            if (obj instanceof 麻雀) {
-                ((麻雀) obj).飞();
-            } else if (obj instanceof 喜鹊) {
-                ((喜鹊) obj).飞();
-            } else if (obj instanceof 蝴蝶) {
-                ((蝴蝶) obj).飞();
-            } else if (obj instanceof 飞机) {
-                ((飞机) obj).飞();
-            }
+          if(obj instanceof 会飞的东西) {
+              ((会飞的东西)obj).飞();
+          }
         }
     }
     // 在建造成类型体系后，请尝试化简这个啰嗦的方法，体会多态带来的好处
     public static void 会叫的东西叫() {
         for (Object obj : objects) {
-            if (obj instanceof 麻雀) {
-                ((麻雀) obj).叫();
-            } else if (obj instanceof 喜鹊) {
-                ((喜鹊) obj).叫();
-            } else if (obj instanceof 救护车) {
-                ((救护车) obj).叫();
-            } else if (obj instanceof 猫) {
-                ((猫) obj).叫();
-            } else if (obj instanceof 狗) {
-                ((狗) obj).叫();
-            }
+          if(obj instanceof 会叫的东西) {
+            ((会叫的东西)obj).叫();
+          }
         }
     }
     // 在建造成类型体系后，请尝试化简这个啰嗦的方法，体会多态带来的好处
     public static void 动物都能新陈代谢() {
         for (Object obj : objects) {
-            if (obj instanceof 麻雀) {
-                ((麻雀) obj).新陈代谢();
-            } else if (obj instanceof 喜鹊) {
-                ((喜鹊) obj).新陈代谢();
-            } else if (obj instanceof 蝴蝶) {
-                ((蝴蝶) obj).新陈代谢();
-            } else if (obj instanceof 猫) {
-                ((猫) obj).新陈代谢();
-            } else if (obj instanceof 狗) {
-                ((狗) obj).新陈代谢();
-            }
+          if(obj instanceof 动物) {
+            ((动物)obj).新陈代谢();
+          }
         }
     }
 
-    static class 麻雀 {
+    static class 麻雀 extends 动物 implements 会飞的东西,会叫的东西 {
         public void 新陈代谢() {
             System.out.println("新陈代谢");
         }
@@ -69,7 +47,7 @@ public class World {
         }
     }
 
-    static class 喜鹊 {
+    static class 喜鹊 extends 动物 implements 会飞的东西,会叫的东西 {
         public void 新陈代谢() {
             System.out.println("新陈代谢");
         }
@@ -83,7 +61,7 @@ public class World {
         }
     }
 
-    static class 蝴蝶 {
+    static class 蝴蝶 extends 动物 implements 会飞的东西 {
         public void 新陈代谢() {
             System.out.println("新陈代谢");
         }
@@ -93,19 +71,19 @@ public class World {
         }
     }
 
-    static class 飞机 {
+    static class 飞机 implements 会飞的东西 {
         public void 飞() {
             System.out.println("飞机飞");
         }
     }
 
-    static class 救护车 {
+    static class 救护车 implements 会叫的东西 {
         public void 叫() {
             System.out.println("哇呜哇呜");
         }
     }
 
-    static class 猫 {
+    static class 猫 extends 动物 implements 会叫的东西 {
         public void 新陈代谢() {
             System.out.println("新陈代谢");
         }
@@ -115,7 +93,7 @@ public class World {
         }
     }
 
-    static class 狗 {
+    static class 狗 extends 动物 implements 会叫的东西 {
         public void 新陈代谢() {
             System.out.println("新陈代谢");
         }
@@ -125,8 +103,8 @@ public class World {
         }
     }
 
-    interface 动物 {
-        void 新陈代谢();
+    abstract class 动物 {
+        abstract void 新陈代谢();
     }
 
     interface 会飞的东西 {
