@@ -54,9 +54,10 @@ public class WorldTest {
                     @Override
                     public void describeTo(Description description) {}
                 });
-        World.会叫的东西叫();
-        World.会飞的东西飞();
-        World.动物都能新陈代谢();
+        World newWorld = new World();
+        newWorld.会叫的东西叫();
+        newWorld.会飞的东西飞();
+        newWorld.动物都能新陈代谢();
     }
 
     @Test
